@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /awspipelinedemo.war
+    destination: /home/ec2-user/tomcat/apache-tomcat-8.5.61/webapps/
+  - source: /TestXMLFile.xml
+    destination: /home/ec2-user/tomcat/apache-tomcat-8.5.61/webapps/
+    
+hooks:
+  AfterInstall:
+    - location: server_start.sh
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: server_stop.sh
+      timeout: 300
+      runas: root 

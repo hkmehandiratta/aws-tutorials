@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  build:
+    commands:
+      - mvn clean package
+  post_build:
+    commands:
+      ## aws s3 cp target/*.war s3://myhhbucket23 . We don't need this step.
+      - echo Build completed
+artifacts:
+  files:
+    - target/*.war
+    - scripts/server_start.sh
+    - scripts/server_stop.sh
+    - TestXMLFile.xml
+    - appspec.yml
+   
+  discard-paths: yes
