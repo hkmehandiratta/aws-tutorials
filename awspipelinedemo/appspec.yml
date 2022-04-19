@@ -3,10 +3,12 @@ os: linux
 
 files:
   - source: /awspipelinedemo.war
-    destination: /home/ec2-user/tomcat/apache-tomcat-8.5.61/webapps/
+    destination: /opt/tomcat/apache-tomcat-8.5.78/webapps/
   - source: /TestXMLFile.xml
-    destination: /home/ec2-user/tomcat/apache-tomcat-8.5.61/webapps/
+    destination: /opt/tomcat/apache-tomcat-8.5.78/webapps/
     
+file_exists_behavior: OVERWRITE    
+          
 hooks:
   AfterInstall:
     - location: server_start.sh
