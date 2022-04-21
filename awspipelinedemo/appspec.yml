@@ -3,9 +3,9 @@ os: linux
 
 files:
   - source: /awspipelinedemo.war
-    destination: /opt/tomcat/apache-tomcat-8.5.78/webapps/
+    destination: /opt/tomcat/webapps/
   - source: /TestXMLFile.xml
-    destination: /opt/tomcat/apache-tomcat-8.5.78/webapps/
+    destination: /opt/tomcat/webapps/
     
 file_exists_behavior: OVERWRITE    
           
