@@ -5,18 +5,25 @@
  
  #!/bin/bash
 sudo yum -y update
+
 sudo yum -y install ruby
+
 wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
+
 sudo chmod +x ./install
+
 sudo ./install auto
 
 wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.78/bin/apache-tomcat-8.5.78.tar.gz
 
 sudo mkdir /opt
+
 tar xf apache-tomcat-8.5.78.tar.gz
+
 sudo mv apache-tomcat-8.5.78 tomcat
 
 sudo mv tomcat /opt
+
 cd  /opt/tomcat
 
 #Giving permissions to modify webapp folder to ec2-user
