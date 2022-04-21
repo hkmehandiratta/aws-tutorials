@@ -24,16 +24,12 @@ sudo mv apache-tomcat-8.5.78 tomcat
 
 sudo mv tomcat /opt
 
-cd  /opt/tomcat
+cd /opt
 
-#Giving permissions to modify webapp folder to ec2-user
-
-sudo chown ec2-user:ec2-user webapps -R
-
-#Giving permissions to modify bin folder to ec2-user
-
-sudo chown ec2-user:ec2-user bin -R
+sudo chown ec2-user:ec2-user tomcat -R
 
 sudo chmod +x /opt/tomcat/bin/./startup.sh
+
+sudo chmod +x /opt/tomcat/bin/./shutdown.sh
 
 sudo /opt/tomcat/bin/./startup.sh
