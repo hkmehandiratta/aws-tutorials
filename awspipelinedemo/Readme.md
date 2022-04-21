@@ -4,6 +4,7 @@
 # wget https://aws-codedeploy-$region.s3.amazonaws.com/latest/install , make changes in this link based on your region. Here, it's North Virginia.
  
  #!/bin/bash
+
 sudo yum -y update
 
 sudo yum -y install ruby
