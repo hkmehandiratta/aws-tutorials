@@ -20,7 +20,7 @@ public class DynamoDBSongItem {
     @DynamoDBAttribute(attributeName = "author_id")
     private String authorID;
 
-    @DynamoDBAttribute(attributeName = "release_date_in_epoch_millis")
+    @DynamoDBAttribute(attributeName = "release_date")
     private long releaseDateInEpochMillis;
 
     @DynamoDBAttribute(attributeName = "duration_in_seconds")
